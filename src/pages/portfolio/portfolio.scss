@@ -1,0 +1,84 @@
+@import './../../style';
+
+.m-c__fts {
+    text-align: center;
+    ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .fts{
+        display: inline-block;
+        padding: 4.4px 4px;
+        cursor: pointer;
+        margin-right: 32px;
+        color: $sixtiary;
+        font-weight: bold;
+        list-style: none;
+        font-size: 14px;
+
+        &:hover {
+            color: $primary;
+        }
+
+        &.ave {
+            border-top: 2px solid $secondary;
+            color: $secondary;
+            font-weight: bold;
+        }
+    }
+}
+
+.pto {
+	display: grid;
+	grid-template-columns: repeat(2, 540px);
+	grid-gap: 50px;
+	padding: 0 auto;
+	justify-content: center;
+	grid-template-rows: repeat(auto-fit, 231px);
+}
+
+.pto__itm {
+	background-color: $fourtiary;
+	width: 540px;
+	display: grid;
+	grid-template-columns: 35% 65%;
+
+	&--img {
+        margin: 0 auto;
+
+		img {
+			object-fit: cover;
+			width: 100%;
+			height: 231px;
+		}
+	}
+
+	&--inf {
+		padding: 20px;
+        box-sizing: border-box;
+
+		h2 {
+			text-transform: capitalize;
+			font-family: inherit;
+			color: $primary;
+			font-size: 18px;
+			margin: 0 0 12px;
+		}
+
+	}
+}
+
+@media (min-width: 2559px) and (min-height: 1489px){
+    .pto{
+        grid-template-columns: repeat(2, 40%);
+        .pto__itm{
+            width: 100%;
+
+            &--inf{
+                padding: 45px;
+                text-align: justify;
+            }
+        }
+    }
+}

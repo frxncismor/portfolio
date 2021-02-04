@@ -1,0 +1,23 @@
+@import './../../style';
+
+.m-h {
+    background-color: $fourtiary;
+    padding: 48px 0px;
+
+    &__txt {
+        margin: 0 281px;
+        text-align: center;
+        height: -webkit-fill-available;
+        text-transform: capitalize;
+
+        h1 {
+            margin-bottom: 8px;
+        }
+
+        p {
+            color: $primary;
+            margin-bottom: 35px;
+        }
+
+    }
+}

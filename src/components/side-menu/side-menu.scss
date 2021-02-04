@@ -1,0 +1,83 @@
+@import './../../style';
+
+.s-m {
+	grid-column: 1 / span 1;
+	grid-row: 1 / span 1;	
+	background-color: $primary;
+
+	&__tle {
+		font-weight: bold;
+		color: $fiftiary;
+		font-size: 24px;
+		padding: 24px 0 0;
+		text-align: center;
+
+		a {
+			color: $fiftiary;
+			text-decoration: none;
+			background-color: transparent;
+			&:hover {
+				color: $secondary;
+			}
+		}
+	}
+
+	&__con{
+		padding: 24px 16px;
+	}
+}
+
+.con__pro{
+	text-align: center;
+
+	img {
+		max-width: 160px;
+		margin: 0 0 16px;
+		border-radius: 50%;
+		vertical-align: middle;
+		border-style: none;
+	}
+
+	&--bio {
+		margin: 0 0 16px;
+		color: $fiftiary;
+		font-size: 14px;
+	}
+
+	&--soc {
+		color: $fiftiary;
+		font-size: 16px;
+		margin: 0 0 16px;
+		padding: 8px 0px;
+		list-style: none;
+	}
+
+	hr {
+		border-color: rgba(196, 192, 192, 0.37);
+	}
+}
+
+.soc__log {
+	margin: 0 8px 0 0;
+	display: inline-block;
+
+	a {
+		width: 32px;
+		height: 32px;
+		padding: 8px 0 0 0;
+		background-color: $fiftiary;
+		display: inline-block;
+		text-align: center;
+		border-radius: 50%;
+		transition: all 0.4s ease-in-out;
+
+		img {
+			width: 16px;
+			height: 16px;
+		}
+
+		&:hover {
+			background-color: $secondary;
+		}
+	}
+}
