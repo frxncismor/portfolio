@@ -9,11 +9,27 @@ $fiftiary: #ffffff;
 $sixtiary: #8f8f8f;
 
 // size variables
-$sideMenuWidth: 14.6%;
+$sideMenuWidth: 280px;
 $headingSection: 26.255%;
+$headerTextSize: 18px; 
+$em: 12px;
 
 // font variables
 $montserrat: 'Montserrat', sans-serif;
+
+// mixins
+@mixin title-font-size($n: $em) {
+	font-size: $n * 1.125em;
+}
+
+@mixin paragraph-font-size($n: $em) {
+	font-size: $n * .879em;
+}
+
+@mixin link-font-size($n: $em) {
+	font-size: $n * .7em;
+}
+
 
 * {
 	box-sizing: border-box;
@@ -28,7 +44,7 @@ h1 {
 
 body {
 	display: grid;
-    grid-template-columns: $sideMenuWidth 1fr;
+	grid-template-columns: $sideMenuWidth 1fr;
     grid-template-rows: 1fr;
     font-family: "Montserrat", sans-serif;
     height: 100vh;
@@ -47,7 +63,7 @@ body {
 .inf__des{
     font-family: inherit;
     color: $primary;
-    font-size: 14px;
+    @include paragraph-font-size(1);
     font-weight: 300;
     margin: 0 0 16px;
 }
@@ -56,7 +72,7 @@ body {
 	font-family: inherit;
 	margin: 0 0 12px;
 	font-weight: 600;
-	font-size: 11.2px;
+	@include link-font-size(1);
 	color: $primary;
 
 	a {
@@ -70,7 +86,7 @@ body {
 .inf__tec {
 	font-family: inherit;
 	color: $secondary;
-	font-size: 11.2px;
+	@include link-font-size(1);
 	font-weight: bold;
 	text-transform: capitalize;
 }
@@ -89,4 +105,25 @@ body {
 	&:hover {
 		background-color: $secondary;
 	}
+}
+
+@media (min-width: 2559px){
+	$sideMenuWidth: 400px;
+
+	body{
+		grid-template-columns: $sideMenuWidth 1fr;
+	}
+
+	.main{
+		left: $sideMenuWidth;
+	}
+
+	.inf__des{
+		@include paragraph-font-size(1.2);
+	}
+
+	.inf__l, .inf__tec{
+		@include link-font-size(1.2);
+	}
+
 }

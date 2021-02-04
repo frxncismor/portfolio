@@ -6,6 +6,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        margin: 0 0 48px;
     }
     .fts{
         display: inline-block;
@@ -15,7 +16,7 @@
         color: $sixtiary;
         font-weight: bold;
         list-style: none;
-        font-size: 14px;
+        @include paragraph-font-size(.875);
 
         &:hover {
             color: $primary;
@@ -32,7 +33,7 @@
 .pto {
 	display: grid;
 	grid-template-columns: repeat(2, 540px);
-	grid-gap: 50px;
+	grid-gap: 30px;
 	padding: 0 auto;
 	justify-content: center;
 	grid-template-rows: repeat(auto-fit, 231px);
@@ -62,14 +63,14 @@
 			text-transform: capitalize;
 			font-family: inherit;
 			color: $primary;
-			font-size: 18px;
+			@include title-font-size(1);
 			margin: 0 0 12px;
 		}
 
 	}
 }
 
-@media (min-width: 2559px) and (min-height: 1489px){
+@media (min-width: 2559px){
     .pto{
         grid-template-columns: repeat(2, 40%);
         .pto__itm{
@@ -78,6 +79,10 @@
             &--inf{
                 padding: 45px;
                 text-align: justify;
+
+                h2{
+                    @include title-font-size(1.2);
+                }
             }
         }
     }

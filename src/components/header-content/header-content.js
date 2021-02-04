@@ -1,3 +1,4 @@
+import './header-content.scss';
 const headerContent = (title, description) => {
     let headerContent = document.getElementById('header');
     headerContent.innerHTML = `
