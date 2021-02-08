@@ -1,4 +1,4 @@
-const sideMenu = () => {
+const sideMenu = (router) => {
 	let sideMenu = document.getElementById('side-menu');
 	sideMenu.innerHTML = `
         <h1 class="s-m__tle"><a href="#">Frxncismor</a></h1>
@@ -29,9 +29,30 @@ const sideMenu = () => {
                     </li>
                 </ul>
                 <hr />
+                <ul>
+                    <li><button id="btnPortfolio">Portafolio</button></li>
+                    <li><button id="btnContact">Contact</button></li>
+                    <li><button id="btnHome">Home</button></li>
+                    </ul>
             </div>
         </div>
     `;
+
+	const $home = document.getElementById('btnHome');
+	const $contact = document.getElementById('btnContact');
+	const $portfolio = document.getElementById('btnPortfolio');
+
+	$home.addEventListener('click', () => {
+		router.loadRoute('');
+	});
+
+	$contact.addEventListener('click', () => {
+		router.loadRoute('/contact');
+	});
+
+	$portfolio.addEventListener('click', () => {
+		router.loadRoute('/portfolio');
+	});
 };
 
 export default module = sideMenu;
