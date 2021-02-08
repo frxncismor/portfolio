@@ -1,6 +1,6 @@
 const sideMenu = () => {
-    let sideMenu = document.getElementById('side-menu');
-    sideMenu.innerHTML = `
+	let sideMenu = document.getElementById('side-menu');
+	sideMenu.innerHTML = `
         <h1 class="s-m__tle"><a href="#">Frxncismor</a></h1>
         <div class="s-m__con">
             <div class="con__pro">
@@ -13,25 +13,25 @@ const sideMenu = () => {
                 </div>
                 <ul class="con__pro--soc">
                     <li class="soc__log">
-                        <a target="_blank" href="https://twitter.com/frxncismor"
-                            ><img src="https://img.icons8.com/android/24/2d4059/twitter.png"
+                        <a rel="noopener" target="_blank" href="https://twitter.com/frxncismor"
+                            ><img alt="twitter logo" src="https://img.icons8.com/android/24/2d4059/twitter.png"
                         /></a>
                     </li>
                     <li class="soc__log">
-                        <a target="_blank" href="https://github.com/frxncismor"
-                            ><img src="https://img.icons8.com/ios-glyphs/30/2d4059/github-2.png"
+                        <a rel="noopener" target="_blank" href="https://github.com/frxncismor"
+                            ><img alt="github logo" src="https://img.icons8.com/ios-glyphs/30/2d4059/github-2.png"
                         /></a>
                     </li>
                     <li class="soc__log">
-                        <a target="_blank" href="https://www.linkedin.com/in/frxncismor/"
-                            ><img src="https://img.icons8.com/ios-glyphs/30/2d4059/linkedin-2.png"
+                        <a rel="noopener" target="_blank" href="https://www.linkedin.com/in/frxncismor/"
+                            ><img alt="linkedin logo" src="https://img.icons8.com/ios-glyphs/30/2d4059/linkedin-2.png"
                         /></a>
                     </li>
                 </ul>
                 <hr />
             </div>
         </div>
-    `
-}
+    `;
+};
 
 export default module = sideMenu;
